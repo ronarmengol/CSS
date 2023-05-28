@@ -29,9 +29,63 @@
 
         .header__profile {
             display: flex;
+            align-items: baseline;
             justify-content: end;
             margin-top: 5px;
             position: relative;
+            justify-content: space-between;
+        }
+
+
+        /**************************************************
+        *            nav
+        **************************************************/
+        .header__profile > nav > ul{
+            display: flex;
+            list-style: none;
+            margin-left: 20px;
+        }
+
+        .header__profile > nav > ul > li > a {
+            text-decoration: none;
+            color: rgba(0,0,0,0.5);
+            font-size: 1.2rem;
+            margin-right: 40px;
+        }
+
+        .activePage {
+            font-weight: 500;
+            color: black !important;
+        }
+
+        .main_nav_products {
+            position: absolute;
+            background-color: white;
+            list-style: none;
+            /* display: none; */
+            height: 0;
+            overflow-y: hidden;
+        }
+        
+        .main_nav > ul > li:nth-child(3):hover .main_nav_products{
+            height: auto;
+            /* border: 1px solid rgba(0,0,0,0.5);        */
+            transition: 1s all;
+            box-shadow: 2px 2px 3px 1px;
+        }
+
+        .main_nav_products > li {
+            padding: 2px 5px;
+        }
+
+        .main_nav_products > li:hover {
+            background-color: rgba(0,0,0,0.2);
+            padding: 2px 5px;
+        }
+
+        .main_nav_products > li > a {
+            text-decoration: none;
+            color: rgba(0,0,0,0.7);
         }
 
         .header__profile img {
@@ -57,10 +111,45 @@
             cursor: pointer;
         }
 
+        .header__title {
+            text-align: center;
+            font-weight: 500;
+
+        }
+
+
+
     </style>
 </head>
 <body>
     <div class="header__profile">
+        <nav class="main_nav">
+            <ul>
+                <li>
+                    <a class="activePage" href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Products </a>
+                    <ul class="main_nav_products">
+                        <li>
+                            <a href="#">web design</a>
+                        </li>
+                        <li>
+                            <a href="#">debugging</a>
+                        </li>
+                        <li>
+                            <a href="#">maintenance</a>
+                        </li>
+                        <li>
+                            <a href="#">dynamic websites</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
         <img id="profile" src="images/icon_profile.png" alt="profile icon">
         <div class="header__profile_text">
             <p class="header__profile_p">settings</p>
@@ -68,9 +157,14 @@
         </div>
     </div>
 
+    <header>
+        <h1 class="header__title">Drop down</h1>
+    </header>
+
 
     <script>
         window.addEventListener('load', () => {
+
 
             const profile = document.getElementById('profile');
             const profileText = document.querySelector('.header__profile_text');
