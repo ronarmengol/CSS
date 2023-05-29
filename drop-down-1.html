@@ -1,196 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+
     <title>Document</title>
 
     <style>
-        html {
-        font-size:16px;
+      html {
+        font-size: 16px;
         scroll-behavior: smooth;
         -webkit-font-smoothing: antialiased;
-        }
-        
-        * {
+      }
+
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        }
-        
-        body {
-            font-family: "Poppins", sans-serif;
-        }
+      }
 
-        .header__profile {
-            display: flex;
-            align-items: baseline;
-            justify-content: end;
-            margin-top: 5px;
-            position: relative;
-            justify-content: space-between;
-        }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
 
+      .header__profile {
+        display: flex;
+        align-items: baseline;
+        justify-content: end;
+        margin-top: 5px;
+        position: relative;
+        justify-content: space-between;
+      }
 
-        /**************************************************
-        *            nav
-        **************************************************/
-        .header__profile > nav > ul{
-            display: flex;
-            list-style: none;
-            margin-left: 20px;
-        }
+/**************************************************
+*            nav
+**************************************************/
 
-        .header__profile > nav > ul > li > a {
-            text-decoration: none;
-            color: rgba(0,0,0,0.5);
-            font-size: 1.2rem;
-            margin-right: 40px;
-        }
+      .header__profile > nav > ul {
+        display: flex;
+        list-style: none;
+        margin-left: 20px;
+      }
 
-        .activePage {
-            font-weight: 500;
-            color: black !important;
-        }
+      .header__profile > nav > ul > li > a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.2rem;
+        margin-right: 40px;
+      }
 
-        .main_nav_products {
-            position: absolute;
-            background-color: white;
-            list-style: none;
-            /* display: none; */
-            height: 0;
-            overflow-y: hidden;
-        }
-        
-        .main_nav > ul > li:nth-child(3):hover .main_nav_products{
-            height: auto;
-            /* border: 1px solid rgba(0,0,0,0.5);        */
-            transition: 1s all;
-            box-shadow: 2px 2px 3px 1px;
-        }
+      .activePage {
+        font-weight: 500;
+        color: black !important;
+      }
 
-        .main_nav_products > li {
-            padding: 2px 5px;
-        }
+      .main_nav_products {
+        position: absolute;
+        background-color: white;
+        list-style: none;
+        /* display: none; */
+        height: 0;
+        overflow-y: hidden;
+      }
 
-        .main_nav_products > li:hover {
-            background-color: rgba(0,0,0,0.2);
-            padding: 2px 5px;
-        }
+      .main_nav > ul > li:nth-child(3):hover .main_nav_products {
+        height: auto;
+        /* border: 1px solid rgba(0,0,0,0.5);        */
+        transition: 1s all;
+        box-shadow: 2px 2px 3px 1px;
+      }
 
-        .main_nav_products > li > a {
-            text-decoration: none;
-            color: rgba(0,0,0,0.7);
-        }
+      .main_nav_products > li {
+        padding: 2px 5px;
+      }
 
-        .header__profile img {
-            width: 25px;
-            margin-right: 50px;
-            cursor: pointer;
-        }
+      .main_nav_products > li:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 2px 5px;
+      }
 
-        .header__profile_text {
-            position: absolute;
-            top: 40px;
-            right: 10px;
-            padding: 5px 0;
-            border: 1px solid grey;
-            display: none;
-            text-align: center;
-            width: 100px;
-        }
+      .main_nav_products > li > a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.7);
+      }
 
-        .header__profile_p:hover {
-            background-color: rgba(0,0,0,0.5);
-            color: #ccc;
-            cursor: pointer;
-        }
+      .header__profile img {
+        width: 25px;
+        margin-right: 50px;
+        cursor: pointer;
+      }
 
-        .header__title {
-            text-align: center;
-            font-weight: 500;
+      .header__profile_text {
+        position: absolute;
+        top: 40px;
+        right: 10px;
+        padding: 5px 0;
+        border: 1px solid grey;
+        display: none;
+        text-align: center;
+        width: 100px;
+      }
 
-        }
+      .header__profile_p:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #ccc;
+        cursor: pointer;
+      }
 
-
-
+      .header__title {
+        text-align: center;
+        font-weight: 500;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header__profile">
-        <nav class="main_nav">
-            <ul>
-                <li>
-                    <a class="activePage" href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Products </a>
-                    <ul class="main_nav_products">
-                        <li>
-                            <a href="#">web design</a>
-                        </li>
-                        <li>
-                            <a href="#">debugging</a>
-                        </li>
-                        <li>
-                            <a href="#">maintenance</a>
-                        </li>
-                        <li>
-                            <a href="#">dynamic websites</a>
-                        </li>
-                    </ul>
-                </li>
+      <nav class="main_nav">
+        <ul>
+          <li>
+            <a class="activePage" href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Products </a>
+            <ul class="main_nav_products">
+              <li>
+                <a href="#">web design</a>
+              </li>
+              <li>
+                <a href="#">debugging</a>
+              </li>
+              <li>
+                <a href="#">maintenance</a>
+              </li>
+              <li>
+                <a href="#">dynamic websites</a>
+              </li>
             </ul>
-        </nav>
-        <img id="profile" src="images/icon_profile.png" alt="profile icon">
-        <div class="header__profile_text">
-            <p class="header__profile_p">settings</p>
-            <p class="header__profile_p">logout</p>
-        </div>
+          </li>
+        </ul>
+      </nav>
+      <img id="profile" src="images/icon_profile.png" alt="profile icon" />
+      <div class="header__profile_text">
+        <p class="header__profile_p">settings</p>
+        <p class="header__profile_p">logout</p>
+      </div>
     </div>
 
     <header>
-        <h1 class="header__title">Drop down</h1>
+      <h1 class="header__title">Drop down</h1>
     </header>
 
-
     <script>
-        window.addEventListener('load', () => {
+      window.addEventListener("load", () => {
+        const profile = document.getElementById("profile");
+        const profileText = document.querySelector(".header__profile_text");
+        profile.addEventListener("click", () => {
+          profileText.style.display = "block";
+        });
 
+        profileText.addEventListener("mouseleave", () => {
+          profileText.style.display = "none";
+        });
 
-            const profile = document.getElementById('profile');
-            const profileText = document.querySelector('.header__profile_text');
-            profile.addEventListener('click', ()=> {
-                profileText.style.display = 'block';
-                
-            })
+        profile.addEventListener("blur", () => {
+          profileText.style.display = "none";
+        });
 
-            profileText.addEventListener('mouseleave', () => {
-                profileText.style.display = 'none';
-            })
-
-            profile.addEventListener('blur', () => {
-                profileText.style.display = 'none';
-            })
-            
-            document.addEventListener('click', function(event) {
-                if (!profile.contains(event.target)) {
-                    // Click occurred outside the element
-                    console.log('Clicked outside the element');
-                    console.log(event.target);
-                    profileText.style.display = 'none';
-                }
-            });
-
-        })
+        document.addEventListener("click", function (event) {
+          if (!profile.contains(event.target)) {
+            // Click occurred outside the element
+            console.log("Clicked outside the element");
+            console.log(event.target);
+            profileText.style.display = "none";
+          }
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
